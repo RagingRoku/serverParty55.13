@@ -10,7 +10,7 @@ let server = myhttp.createServer(
     console.log("was your URL: " + request.url + "?")
     let myMessage;
     if(request.url === "/sup"){
-      myMessage = "Hello there";
+      myMessage = "Hello there!\n\nBy the way did you know the quick brown fox jumped over the lazy dog?";
 
     } else {
       myMessage = "Unknown guest detected!"
@@ -24,7 +24,7 @@ let server = myhttp.createServer(
     response.writeHead(200, { "Content-Type": "text/plain"} );
   
     //end() returns data and closes reponse
-    response.end(myMessage + "!\n");
+    response.end(myMessage + "\n");
   }
 
 );
